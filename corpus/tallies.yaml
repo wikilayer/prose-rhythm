@@ -1,0 +1,174 @@
+language: en
+anchors:
+  flat: &flat He climbed the stairs to the attic. The boxes stood where his father had left them. He opened the first one and found letters tied with string. He read the top letter by the window.
+  rain: &rain Rain. Under the eave the stone stayed dry, and she waited there with the basket against her hip while the carts went by one after another, each wheel striking the same broken flag and rolling on as if nothing in the street had ever been broken at all. Then quiet.
+  latch: &latch When the last cart had gone she lifted the latch. Inside, nobody moved for a long while. She counted the hooks.
+  door: &door Twice the door swung back on her. Slowly, with her shoulder, she held it.
+  dialogue: &dialogue “Come,” she said.
+  calm3: &calm3 Then it rained. Then it rained. Then it rained.
+  calm4: &calm4 Then it rained. Then it rained. Then it rained. Then it rained.
+  calm6: &calm6 Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained.
+  calm7: &calm7 Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained.
+  thirty: &thirty Then the the the the the the the the the the the the the the the the the the the the the the the the the the the the end.
+  twenty_nine: &twenty_nine Then the the the the the the the the the the the the the the the the the the the the the the the the the the the end.
+  long_then_three: &long_then_three Then the the the the the the the the the the the the the the the the the the the the the the the the the the the the end. Then it rained. Then it rained. Then it rained.
+  long_then_forty_five: &long_then_forty_five Then the the the the the the the the the the the the the the the the the the the the the the the the the the the the end. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained. Then it rained.
+cases:
+  - name: flat prose fails every check
+    paragraphs: [*flat, *flat, *flat, *flat, *flat, *flat, *flat, *flat]
+    tally:
+      sentences: 32
+      words: 280
+      squared_words: 2520
+      long_sentences: 0
+      longest: 11
+      paragraphs: 8
+      uniform_paragraphs: 8
+      subject_run_sentences: 32
+      dialogue_paragraphs: 0
+    judged: true
+    findings:
+      - {kind: spread, value: 0.16903085094570333, bound: min, limit: 0.55}
+      - {kind: long_sentences, value: 0.0, bound: min, limit: 0.04}
+      - {kind: uniform_paragraphs, value: 1.0, bound: max, limit: 0.5}
+      - {kind: subject_runs, value: 1.0, bound: max, limit: 0.4}
+    places:
+      - {paragraph: 0, sentences: 4}
+      - {paragraph: 1, sentences: 4}
+      - {paragraph: 2, sentences: 4}
+      - {paragraph: 3, sentences: 4}
+      - {paragraph: 4, sentences: 4}
+      - {paragraph: 5, sentences: 4}
+      - {paragraph: 6, sentences: 4}
+      - {paragraph: 7, sentences: 4}
+
+  - name: varied prose passes every check
+    paragraphs: [*rain, *latch, *door, *rain, *latch, *door, *rain, *latch, *door, *rain, *latch, *door]
+    tally:
+      sentences: 32
+      words: 340
+      squared_words: 9908
+      long_sentences: 4
+      longest: 47
+      paragraphs: 12
+      uniform_paragraphs: 0
+      subject_run_sentences: 0
+      dialogue_paragraphs: 0
+    judged: true
+    findings: []
+    places: []
+
+  - name: a share exactly at its limit is not a finding
+    paragraphs: [*long_then_three, *long_then_forty_five]
+    tally:
+      sentences: 50
+      words: 204
+      squared_words: 2232
+      long_sentences: 2
+      longest: 30
+      paragraphs: 2
+      uniform_paragraphs: 1
+      subject_run_sentences: 0
+      dialogue_paragraphs: 0
+    judged: true
+    findings: []
+    places: []
+
+  - name: paragraphs of four and of six sentences are uniform, of three and of seven are not
+    paragraphs: [*calm3, *calm4, *calm6, *calm7]
+    tally:
+      sentences: 20
+      words: 60
+      squared_words: 180
+      long_sentences: 0
+      longest: 3
+      paragraphs: 4
+      uniform_paragraphs: 2
+      subject_run_sentences: 0
+      dialogue_paragraphs: 0
+    judged: false
+    findings: []
+    places: []
+
+  - name: a run of four opening with the subject counts and a run of three does not
+    paragraphs: [He ran. He ran. He ran. Then it rained. He ran. He ran. He ran. He ran.]
+    tally:
+      sentences: 8
+      words: 17
+      squared_words: 37
+      long_sentences: 0
+      longest: 3
+      paragraphs: 1
+      uniform_paragraphs: 0
+      subject_run_sentences: 4
+      dialogue_paragraphs: 0
+    judged: false
+    findings: []
+    places:
+      - {paragraph: 0, sentences: 4}
+
+  - name: a sentence of thirty words is long and of twenty-nine is not
+    paragraphs: [*thirty, *twenty_nine]
+    tally:
+      sentences: 2
+      words: 59
+      squared_words: 1741
+      long_sentences: 1
+      longest: 30
+      paragraphs: 2
+      uniform_paragraphs: 0
+      subject_run_sentences: 0
+      dialogue_paragraphs: 0
+    judged: false
+    findings: []
+    places: []
+
+  - name: too little narration is not judged
+    paragraphs: [*flat]
+    tally:
+      sentences: 4
+      words: 35
+      squared_words: 315
+      long_sentences: 0
+      longest: 11
+      paragraphs: 1
+      uniform_paragraphs: 1
+      subject_run_sentences: 4
+      dialogue_paragraphs: 0
+    judged: false
+    findings: []
+    places:
+      - {paragraph: 0, sentences: 4}
+
+  - name: dialogue and wordless paragraphs are left out but keep their place
+    paragraphs: [*dialogue, *flat, "", "•  •  •"]
+    tally:
+      sentences: 4
+      words: 35
+      squared_words: 315
+      long_sentences: 0
+      longest: 11
+      paragraphs: 1
+      uniform_paragraphs: 1
+      subject_run_sentences: 4
+      dialogue_paragraphs: 1
+    judged: false
+    findings: []
+    places:
+      - {paragraph: 1, sentences: 4}
+
+  - name: nothing at all is not judged
+    paragraphs: []
+    tally:
+      sentences: 0
+      words: 0
+      squared_words: 0
+      long_sentences: 0
+      longest: 0
+      paragraphs: 0
+      uniform_paragraphs: 0
+      subject_run_sentences: 0
+      dialogue_paragraphs: 0
+    judged: false
+    findings: []
+    places: []

@@ -1,0 +1,120 @@
+language: en
+cases:
+  - name: initials do not end a sentence
+    paragraph: Letters by H. K. Varden survive. They are kept apart.
+    sentences:
+      - [Letters by H. K. Varden survive., 6]
+      - [They are kept apart., 4]
+
+  - name: a title does not end a sentence
+    paragraph: Mr. Hale took him on. He stayed.
+    sentences:
+      - [Mr. Hale took him on., 5]
+      - [He stayed., 2]
+
+  - name: a rank does not end a sentence
+    paragraph: Capt. Hale took him on. He stayed.
+    sentences:
+      - [Capt. Hale took him on., 5]
+      - [He stayed., 2]
+
+  - name: a title after an opening bracket does not end a sentence
+    paragraph: He wrote it down (Mr. Hale had asked him to). Nobody read it.
+    sentences:
+      - [He wrote it down (Mr. Hale had asked him to)., 10]
+      - [Nobody read it., 3]
+
+  - name: a lowercase abbreviation does not end a sentence before a capital
+    paragraph: They grew fruit, e.g. Apples and pears. The rest was grass.
+    sentences:
+      - ["They grew fruit, e.g. Apples and pears.", 8]
+      - [The rest was grass., 4]
+
+  - name: an abbreviation of letters does not end a sentence and counts a word per letter
+    paragraph: He sailed for the U.S. Navy that spring.
+    sentences:
+      - [He sailed for the U.S. Navy that spring., 9]
+
+  - name: the pronoun I ends a sentence
+    paragraph: The one who paid was I. Then nobody spoke.
+    sentences:
+      - [The one who paid was I., 6]
+      - [Then nobody spoke., 3]
+
+  - name: a decimal point does not end a sentence and splits the number
+    paragraph: It cost 3.5 coins. Nobody argued.
+    sentences:
+      - [It cost 3.5 coins., 5]
+      - [Nobody argued., 2]
+
+  - name: a dash may open a sentence
+    paragraph: He stopped. —And then he went on.
+    sentences:
+      - [He stopped., 2]
+      - [—And then he went on., 5]
+
+  - name: a lowercase word does not open a sentence
+    paragraph: He said no. then he left.
+    sentences:
+      - [He said no. then he left., 6]
+
+  - name: a year may open a paragraph
+    paragraph: 1923. The rains came back.
+    sentences:
+      - ["1923.", 1]
+      - [The rains came back., 4]
+
+  - name: a superscript digit does not open a sentence
+    paragraph: It ran to the end. ²See the notes.
+    sentences:
+      - [It ran to the end. ²See the notes., 8]
+
+  - name: a closing quote stays with its sentence
+    paragraph: He called it “the end.” Nobody laughed.
+    sentences:
+      - [He called it “the end.”, 5]
+      - [Nobody laughed., 2]
+
+  - name: a bracket stays with its sentence
+    paragraph: He left (for good.) Nobody followed.
+    sentences:
+      - [He left (for good.), 4]
+      - [Nobody followed., 2]
+
+  - name: several ends make one break
+    paragraph: Was it over?! It was.
+    sentences:
+      - ["Was it over?!", 3]
+      - [It was., 2]
+
+  - name: an ellipsis ends a sentence
+    paragraph: He waited… Nothing came.
+    sentences:
+      - [He waited…, 2]
+      - [Nothing came., 2]
+
+  - name: a no-break space separates sentences
+    paragraph: "He waited.\_Nothing came."
+    sentences:
+      - [He waited., 2]
+      - [Nothing came., 2]
+
+  - name: an apostrophe and a hyphen stay inside a word
+    paragraph: It’s a well-kept road.
+    sentences:
+      - [It’s a well-kept road., 4]
+
+  - name: a combining mark stays inside its word
+    paragraph: "A nai\U00000308ve plan."
+    sentences:
+      - ["A nai\U00000308ve plan.", 3]
+
+  - name: letters of any script make words
+    paragraph: Он ушёл. Она осталась.
+    sentences:
+      - [Он ушёл., 2]
+      - [Она осталась., 2]
+
+  - name: a paragraph without words has no sentences
+    paragraph: "•  •  •"
+    sentences: []

@@ -1,0 +1,37 @@
+language: en
+cases:
+  - name: a quoted name is not dialogue
+    paragraph: The ship was called the "Skylark." It flew well, and they slept on it for days.
+    dialogue: false
+
+  - name: single curly quotes are dialogue
+    paragraph: ‘Come in,’ she said.
+    dialogue: true
+
+  - name: straight quotes are dialogue
+    paragraph: '"Yes," she said. "Of course."'
+    dialogue: true
+
+  - name: apostrophes are not quotes
+    paragraph: It’s the king’s road, and nobody’s goats walk on it any more.
+    dialogue: false
+
+  - name: an unclosed quote is not dialogue
+    paragraph: He wrote “and then stopped, the pen still wet on the page for a while.
+    dialogue: false
+
+  - name: the share is counted in characters, not bytes
+    paragraph: '"Ok," она сказала тихо.'
+    dialogue: true
+
+  - name: a quoted share of exactly a fifth is dialogue
+    paragraph: He said "a" ok.
+    dialogue: true
+
+  - name: a quoted share just under a fifth is not dialogue
+    paragraph: He said "a" okay.
+    dialogue: false
+
+  - name: an empty paragraph is not dialogue
+    paragraph: ""
+    dialogue: false

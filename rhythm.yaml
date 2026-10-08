@@ -1,0 +1,181 @@
+languages:
+  en:
+    thresholds:
+      minimum_sentences: 30
+      long_words: 30
+      uniform_paragraph_sentences: [4, 6]
+      subject_run: 4
+    checks:
+      - {kind: spread, bound: min, limit: 0.55}
+      - {kind: long_sentences, bound: min, limit: 0.04}
+      - {kind: uniform_paragraphs, bound: max, limit: 0.5}
+      - {kind: subject_runs, bound: max, limit: 0.4}
+    word_joiners: "’'-"
+    sentence_ends: ".!?…"
+    closers: "\"”’')]"
+    openers: "\"“‘'([—–"
+    quote_pairs:
+      - ['"', '"']
+      - ["“", "”"]
+      - ["‘", "’"]
+    dialogue_quoted_share: 0.2
+    initial_exceptions:
+      - I.
+    abbreviations:
+      - Mr.
+      - Mrs.
+      - Ms.
+      - Dr.
+      - St.
+      - Mt.
+      - Prof.
+      - Capt.
+      - Col.
+      - Gen.
+      - Lt.
+      - Sgt.
+      - Gov.
+      - Rev.
+      - Hon.
+      - Jr.
+      - Sr.
+      - Messrs.
+      - e.g.
+      - i.e.
+      - etc.
+      - vs.
+      - cf.
+      - No.
+      - a.m.
+      - p.m.
+      - U.S.
+      - U.K.
+    non_subject_suffixes:
+      - ing
+      - ly
+    subject_despite_suffix:
+      - nothing
+      - something
+      - everything
+      - anything
+      - only
+      - king
+      - morning
+      - evening
+      - spring
+      - string
+      - thing
+      - wing
+      - ring
+      - ceiling
+      - building
+      - family
+      - italy
+      - lily
+      - holly
+      - emily
+      - sally
+      - july
+      - reply
+      - supply
+      - belly
+      - ally
+    non_subject_openers:
+      - about
+      - above
+      - across
+      - after
+      - against
+      - again
+      - almost
+      - along
+      - already
+      - also
+      - although
+      - always
+      - among
+      - and
+      - around
+      - as
+      - at
+      - because
+      - before
+      - behind
+      - below
+      - beneath
+      - beside
+      - besides
+      - between
+      - beyond
+      - but
+      - by
+      - despite
+      - down
+      - during
+      - even
+      - for
+      - from
+      - here
+      - how
+      - however
+      - if
+      - in
+      - inside
+      - instead
+      - into
+      - just
+      - later
+      - like
+      - meanwhile
+      - near
+      - never
+      - nor
+      - now
+      - of
+      - "off"
+      - often
+      - "on"
+      - once
+      - onto
+      - or
+      - outside
+      - over
+      - past
+      - perhaps
+      - rather
+      - since
+      - so
+      - sometimes
+      - soon
+      - still
+      - then
+      - there
+      - though
+      - through
+      - throughout
+      - thus
+      - till
+      - to
+      - today
+      - tonight
+      - toward
+      - towards
+      - twice
+      - under
+      - unless
+      - until
+      - up
+      - upon
+      - what
+      - whatever
+      - when
+      - whenever
+      - where
+      - whether
+      - while
+      - why
+      - with
+      - within
+      - without
+      - yesterday
+      - yet

@@ -1,0 +1,26 @@
+language: en
+novels:
+  - id: 67090
+    title: E. R. Eddison, The Worm Ouroboros (1922)
+    tally: {sentences: 2704, words: 74983, squared_words: 3023231, long_sentences: 985, longest: 145, paragraphs: 702, uniform_paragraphs: 205, subject_run_sentences: 361, dialogue_paragraphs: 1582}
+  - id: 61077
+    title: Lord Dunsany, The King of Elfland's Daughter (1924)
+    tally: {sentences: 2087, words: 64830, squared_words: 2777656, long_sentences: 973, longest: 137, paragraphs: 581, uniform_paragraphs: 147, subject_run_sentences: 97, dialogue_paragraphs: 203}
+  - id: 20869
+    title: E. E. Smith, The Skylark of Space (1928)
+    tally: {sentences: 1682, words: 37909, squared_words: 1120865, long_sentences: 430, longest: 110, paragraphs: 626, uniform_paragraphs: 124, subject_run_sentences: 228, dialogue_paragraphs: 1206}
+  - id: 20788
+    title: Andre Norton, Storm Over Warlock (1960)
+    tally: {sentences: 3029, words: 52836, squared_words: 1231166, long_sentences: 379, longest: 108, paragraphs: 855, uniform_paragraphs: 343, subject_run_sentences: 255, dialogue_paragraphs: 375}
+  - id: 18137
+    title: H. Beam Piper, Little Fuzzy (1962)
+    tally: {sentences: 1799, words: 29528, squared_words: 643558, long_sentences: 177, longest: 84, paragraphs: 517, uniform_paragraphs: 171, subject_run_sentences: 370, dialogue_paragraphs: 899}
+  - id: 20728
+    title: H. Beam Piper, Space Viking (1963)
+    tally: {sentences: 1991, words: 35220, squared_words: 838518, long_sentences: 257, longest: 71, paragraphs: 590, uniform_paragraphs: 190, subject_run_sentences: 461, dialogue_paragraphs: 918}
+  - id: 17958
+    title: Terry Carr, Warlord of Kor (1963)
+    tally: {sentences: 1170, words: 19788, squared_words: 460872, long_sentences: 129, longest: 80, paragraphs: 386, uniform_paragraphs: 118, subject_run_sentences: 216, dialogue_paragraphs: 434}
+  - id: 25035
+    title: Robert Silverberg, The Happy Unfortunate (1957)
+    tally: {sentences: 292, words: 3704, squared_words: 67080, long_sentences: 13, longest: 46, paragraphs: 93, uniform_paragraphs: 19, subject_run_sentences: 82, dialogue_paragraphs: 133}
